@@ -1,4 +1,3 @@
-@defer(on viewport){
 <h1 class="font-sans text-6xl font-black text-center pt-8"> How funtion {{ flow1 }} </h1>
 <ul class="text-center pt-4">
     @for(OS of operatingSystem; track OS){
@@ -23,6 +22,8 @@
     <li class="text-xl">
         {{ entry[0] }}: {{ entry[1] }}
     </li>
+    } @empty {
+        <p class="text-xl"> Sorry, we have problems </p>
     }
 </ul>
 
@@ -52,8 +53,12 @@
     </li>
     }
 </ul>
-} @placeholder{
-<p>Future flows of for</p>
-} @loading (minimum 2s){
-<p class="text-center pt-5">Loading flows...</p>
-}
+
+<h1 class="font-sans text-6xl font-black text-center pt-8"> How funtion {{ flow7 }} </h1>
+<ul class="text-center pt-4">
+    @for(OS of S_O; track OS; let count = $count){
+    <li class="text-xl">
+        {{ OS }} : {{ count }}
+    </li>
+    }
+</ul>

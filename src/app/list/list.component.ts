@@ -10,8 +10,8 @@ import { Component } from '@angular/core';
 export class ListComponent {
 
   myMap = new Map([
-    ["firstName", "Angular"],
-    ["lastName", "Framework"],
+    // ["firstName", "Angular"],
+    // ["lastName", "Framework"],
   ]);
 
   flow1 = "@for";
@@ -20,7 +20,7 @@ export class ListComponent {
   flow4 = "@for with $index - Int:incremental (0,1,...)";
   flow5 = "@for with $first and $last - Boolean";
   flow6 = "@for with $odd/impar and $even/par - Boolean";
-  flow7 = "@for with $count - Int:incremental (1,2,...)";
+  flow7 = "@for with $count - Int:iteration (1,2,...)";
 
 
   operatingSystem = [
@@ -39,5 +39,11 @@ export class ListComponent {
     "Windows",
     "MacOs",
     "Linux",
+  ];
+
+  S_O = [
+    "Windows",
+    "MacOs",
+    "Linux"
   ];
 }

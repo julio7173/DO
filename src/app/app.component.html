@@ -1,19 +1,37 @@
 <section class="flex flex-col content-center space-y-8 pt-8">
   @if(loggedIn){
-    <h1 class="font-sans text-6xl font-black text-center pt-8">
-      Hello, <app-user></app-user>
-    </h1>
-    <button (click)="toggleLog()" class="rounded-full bg-cyan-600 p-2 w-fit self-center"> I'm not <app-user></app-user></button>
+  <h1 class="font-sans text-6xl font-black text-center pt-8">
+    Hello, <app-user></app-user>
+  </h1>
+  <button (click)="toggleLog()" class="rounded-full bg-cyan-600 p-2 w-fit self-center"> I'm not
+    <app-user></app-user></button>
   }
   @else {
-    <h1 class="font-sans text-6xl font-black text-center pt-8">
-      Hello, nobody
-    </h1>
-    <button (click)="toggleLog()" class="rounded-full bg-amber-400 p-2 w-fit self-center"> I'm <app-user></app-user></button>
+  <h1 class="font-sans text-6xl font-black text-center pt-8">
+    Hello, nobody
+  </h1>
+  <button (click)="toggleLog()" class="rounded-full bg-amber-400 p-2 w-fit self-center"> I'm
+    <app-user></app-user></button>
 
   }
 </section>
 
+@defer(on viewport){
 <section class="">
   <app-list></app-list>
 </section>
+} @placeholder{
+<p>Future flows of for</p>
+} @loading (minimum 2s){
+<p class="text-center pt-5">Loading flows...</p>
+}
+
+@defer(on viewport){
+<section>
+  <app-paren-t></app-paren-t>
+</section>
+} @placeholder{
+  <p>Future flows of communication</p>
+  } @loading (minimum 2s){
+  <p class="text-center pt-5">Loading flows...</p>
+  }
