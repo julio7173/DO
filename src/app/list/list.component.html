@@ -3,6 +3,6 @@
         My family
     </h1>
     @for(item of personList; track item.id){
-        <app-element class="text-5xl" person={{item.name}} (click)="lookRol()"></app-element>
+        <app-element class="text-5xl" [person]="item" (showRol)="printAlert($event)"></app-element>
     }
 </section>

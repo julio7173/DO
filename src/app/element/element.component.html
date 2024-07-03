@@ -21,6 +21,6 @@
         </tbody>
     </table>
 </section> -->
-<div class="text-center flex justify-center pb-4" (seeRol)="lookRol($event)">
-    <p class="border border-black bg-cyan-400 rounded-xl p-2"> {{ person }} </p>
+<div class="text-center flex justify-center pb-4" (click)="printRol(person.rol)">
+    <p class="border border-black bg-cyan-400 rounded-xl p-2"> {{ person.name }} {{ person.lastname }} </p>
 </div>

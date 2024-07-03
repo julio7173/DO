@@ -1,5 +1,4 @@
-import { Component, Input, Output } from '@angular/core';
-import { EventEmitter } from 'stream';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-element',
@@ -10,13 +9,17 @@ import { EventEmitter } from 'stream';
 })
 export class ElementComponent {
 
-  @Input() person = "";
+  @Input() person : any;
 
-  items = new Array();
+  @Output() showRol = new EventEmitter<string>();
 
-  lookRol(rol:string){
-    alert(this.items.push(rol));
+  printRol(rol:string){
+    this.showRol.next("Hola mundo");
   }
+
+  // lookRol(rol:string){
+  //   alert(this.items(rol));
+  // }
 
   // tableBody = [
   //   {id: 0, name: "Julio Cesar", lastname: "Severiche Orellana", rol: "Older brother"},

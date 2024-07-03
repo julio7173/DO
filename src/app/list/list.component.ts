@@ -18,16 +18,7 @@ export class ListComponent {
     { id: 4, name: "Zulma", lastname: "Orellana Martinez", rol: "Mother" },
   ];
 
-  @Output() seeRol = new EventEmitter<string>();
-
-  lookRol() {
-    let rol = 0;
-    for (let index = 0; index < this.personList.length; index++) {
-      // this.seeRol.emit(this.personList[index].rol);
-      rol = index;
-    }
-    alert(this.seeRol.emit(this.personList[rol].rol));
-
-    // this.seeRol.emit(this.personList[].rol);
+  printAlert(rol:string){
+    alert(rol);
   }
 }
