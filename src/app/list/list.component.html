@@ -1,0 +1,8 @@
+<section class="pt-4">
+    <h1 class="text-6xl font-sans font-black text-center pb-5">
+        My family
+    </h1>
+    @for(item of personList; track item.id){
+        <app-element class="text-5xl" person={{item.name}} (click)="lookRol()"></app-element>
+    }
+</section>
