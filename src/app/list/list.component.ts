@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Output, ViewChild } from '@angular/core';
 import { ElementComponent } from '../element/element.component';
 
 @Component({
@@ -6,7 +6,7 @@ import { ElementComponent } from '../element/element.component';
   standalone: true,
   imports: [ElementComponent],
   templateUrl: './list.component.html',
-  styleUrl: './list.component.css'
+  styleUrl: './list.component.css',
 })
 export class ListComponent {
 
@@ -20,5 +20,9 @@ export class ListComponent {
 
   printAlert(rol:string){
     alert(rol);
+  }
+
+  doSomething(message: string){
+    console.log("Buenos dias");
   }
 }

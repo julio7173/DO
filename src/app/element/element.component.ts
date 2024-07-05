@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter,  } from '@angular/core';
 
 @Component({
   selector: 'app-element',
@@ -14,7 +14,7 @@ export class ElementComponent {
   @Output() showRol = new EventEmitter<string>();
 
   printRol(rol:string){
-    this.showRol.next("Hola mundo");
+    this.showRol.next(rol);
   }
 
   // lookRol(rol:string){

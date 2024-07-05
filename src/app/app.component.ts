@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ListComponent } from './list/list.component';
 
@@ -11,4 +11,20 @@ import { ListComponent } from './list/list.component';
 })
 export class AppComponent {
   title = 'Teaching';
+
+  // @ViewChild('something') lista!: ListComponent;
+
+  @ViewChild(ListComponent) 
+  lista!: ListComponent;
+
+  message = "Vi otro pejelagarto";
+
+
+  ngAfterViewInit(){
+    this.lista.doSomething("Hola desde child list component");
+  }
+
+  // ngAfterViewInit(){
+  //   this.lista.doSomething(this.message);
+  // }
 }
