@@ -6,15 +6,17 @@ import { Todo } from '../type/todo';
 })
 export class TodoService {
 
-  constructor() {};
-
+  
   todo: Todo[] = [];
 
   index = 0;
+
+
+  constructor() {};
   
   add(task:string){
     const id = this.index
-    const newToDo: Todo = {id, task};
+    const newToDo: Todo = new Todo(id, task, false);
     this.todo.push(newToDo);
     this.index += 1;
   }

@@ -16,8 +16,12 @@ export class InputScriptComponent {
   task = "";
 
   addToDo(){
-    this.todoList.add(this.task);
-    this.task = "";
+    if(this.task !== ""){
+      this.todoList.add(this.task);
+      this.task = "";
+    } else {
+      alert("You need type your to do");
+    }
   }
 
 }

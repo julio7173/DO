@@ -1,13 +1,7 @@
-<ul class="grid grid-cols-6 gap-4 pt-10">
-    @for(todo of todoList.todo; track todo; let index = $index){
-        <button class="bg-red-500 rounded-xl text-white" (click)="wipe(index)">
-            Wipe
-        </button>
-        <li [class]="bgDo" id=task-{{todo.id}} >
-            {{ todo.task }}
-        </li>
-        <button [class]="bgButton" (click)="done(index)" id=done-{{todo.id}}>
-            Done
-        </button>
-    }
-</ul>
+<section class="flex justify-center pt-10">
+    <ul>
+        @for(todo of todoList.todo; track todo){
+            <app-my-task [item]="todo"/>
+        }
+    </ul>
+</section>
