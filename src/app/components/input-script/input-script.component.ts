@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TodoService } from '../../services/todo.service';
 import { FormsModule } from '@angular/forms';
 
@@ -13,11 +13,11 @@ export class InputScriptComponent {
 
   constructor(private todoList: TodoService){}
 
-  todo = "";
+  task = "";
 
   addToDo(){
-    this.todoList.add(this.todo);
-    this.todo = "";
+    this.todoList.add(this.task);
+    this.task = "";
   }
 
 }

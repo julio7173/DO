@@ -1,15 +1,12 @@
 <ul class="grid grid-cols-6 gap-4 pt-10">
-    @for(todo of todoList.toDo; track todo; let index = $index){
+    @for(todo of todoList.todo; track todo; let index = $index){
         <button class="bg-red-500 rounded-xl text-white" (click)="wipe(index)">
             Wipe
         </button>
-        <li [class]="bgDo">
-            {{ todo }}
+        <li [class]="bgDo" id=task-{{todo.id}} >
+            {{ todo.task }}
         </li>
-        <!-- <button [class]="bgButton" (click)="done(todo, todo[index], index)">
-            Done
-        </button> -->
-        <button [class]="bgButton" (click)="done()">
+        <button [class]="bgButton" (click)="done(index)" id=done-{{todo.id}}>
             Done
         </button>
     }
