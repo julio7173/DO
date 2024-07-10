@@ -1,0 +1,7 @@
+<section class="flex justify-center pt-10">
+    <ul>
+        @for(todo of todoList.todo; track todo; let index = $index){
+            <app-my-task [item]="todo"/>
+        }
+    </ul>
+</section>

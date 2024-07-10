@@ -1,0 +1,23 @@
+<section class="flex space-x-4 my-4">
+    <button 
+        class="rounded-xl p-2 text-white"
+        [class.bg-red-500]="true"
+        (click)="wipe(index)">
+        Wipe
+    </button>
+    <li 
+        class="rounded-xl p-2 text-white text-3xl w-full"
+        [class.bg-green-500]="item.isDone" 
+        [class.line-through]="!item.isDone"
+        [class.bg-blue-500]="!item.isDone"
+        [class.line-through]="item.isDone">
+        {{ item.task }}
+    </li>
+    <button 
+        class="rounded-xl p-2 text-white"
+        [class.bg-green-500]="item.isDone" 
+        [class.bg-blue-500]="!item.isDone"
+        (click)="done(item)">
+        Done
+    </button>
+</section>
