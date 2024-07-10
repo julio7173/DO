@@ -16,8 +16,11 @@ export class MyTaskComponent {
   @Input()
   item!: Todo;
 
-  wipe(todo: Todo) {
-    this.todoList.delete(todo.id);
+  @Input()
+  index!: number;
+
+  wipe(index: number) {
+    this.todoList.delete(index);
   }
 
   done(todo: Todo){
