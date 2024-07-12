@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { TodoService } from '../../services/todo.service';
-import { Todo } from '../../type/todo';
+import { Todo } from '../../class/todo'; 
 
 @Component({
   selector: 'app-my-task',

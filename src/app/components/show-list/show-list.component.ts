@@ -1,7 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
 import { TodoService } from '../../services/todo.service';
-import { count } from 'console';
-import { Todo } from '../../type/todo';
 import { MyTaskComponent } from '../my-task/my-task.component';
 
 @Component({

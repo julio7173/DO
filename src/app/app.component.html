@@ -1,4 +1,15 @@
-<section class="flex flex-col">
-    <app-input-script></app-input-script>
-    <app-show-list></app-show-list>
+<section class="flex flex-row h-screen bg-black">
+    <div class="bg-cyan-500 rounded-r-xl">
+        <nav class="flex flex-col space-y-4 mx-4 my-4">
+            <button class="rounded-xl bg-yellow-300 text-black font-sans text-2xl p-2" routerLink="/todo">
+                To Do List
+            </button>
+            <button class="rounded-xl bg-yellow-300 text-black font-sans text-2xl p-2" routerLink="/highlights">
+                Highlight Text
+            </button>
+        </nav>
+    </div>
+    <div class="w-[90%]">
+        <router-outlet></router-outlet>
+    </div>    
 </section>
