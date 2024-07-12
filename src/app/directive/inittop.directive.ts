@@ -1,4 +1,4 @@
-import { Directive, ElementRef } from '@angular/core';
+import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appInittop]',
@@ -8,6 +8,8 @@ export class InittopDirective {
 
   constructor(private el: ElementRef) { }
 
-  
+  @HostListener("click") onClick(){
+    console.log(this.el.nativeElement.offsetTop);
+  }
 
 }
