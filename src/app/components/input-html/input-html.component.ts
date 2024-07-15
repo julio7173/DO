@@ -17,10 +17,33 @@ export class InputHtmlComponent {
 
   color = "";
 
+  highlights = [
+    "Green",
+    "Yellow",
+    "Cyan",
+  ];
+
   constructor(private commentList: CommentService){}
 
   addComment(){
     this.commentList.add(this.comment);
     this.id += 1;
+  }
+
+  changeHighlight(index: number){
+    switch (index) {
+      case 0:
+        this.color = "lightgreen";
+        break;
+      case 1:
+        this.color = "yellow";
+        break;
+      case 2:
+        this.color = "cyan";
+        break;
+    
+      default:
+        break;
+    }
   }
 }
