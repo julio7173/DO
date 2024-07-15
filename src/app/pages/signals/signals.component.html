@@ -1,0 +1,21 @@
+<h1 class="text-center pt-8 text-4xl pb-5">
+    Signal is: {{count()}}
+</h1>
+
+<h1 class="text-center pt-8 text-4xl pb-5">
+    Calculated price is: {{showTotal()}}
+</h1>
+
+<section class="flex justify-center space-x-4">
+    <button (click)="change()" class="bg-red-500 text-white text-xl p-2 rounded-xl">
+        Change Signal
+    </button>
+    
+    <button (click)="update()" class="bg-red-500 text-white text-xl p-2 rounded-xl">
+        Update
+    </button>
+
+    <button (click)="calculated()" class="bg-red-500 text-white text-xl p-2 rounded-xl">
+        Calculated
+    </button>
+</section>
