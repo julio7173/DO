@@ -1,5 +1,6 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { HighlightDirective } from '../../directive/highlight.directive';
+import { Comment } from '../../class/comment';
 
 @Component({
   selector: 'app-my-comment',
@@ -10,16 +11,8 @@ import { HighlightDirective } from '../../directive/highlight.directive';
 })
 export class MyCommentComponent {
 
-  // @ViewChild("textMark") textMark!:ElementRef;
-  // @Input() textMark!:ElementRef;
-  @ViewChild("commentMark") commentMark!:ElementRef;
+  @Input() comment!: Comment;
 
-  setTop(top: number){
-    // this.commentMark.nativeElement.offsetTop = this.textMark.nativeElement.offsetTop;
-    console.log(this.commentMark.nativeElement.offsetTop);
-    // console.log(this.textMark.nativeElement.offsetTop);
-    this.commentMark.nativeElement.style.top = top+"px";
-    console.log(this.commentMark.nativeElement.style.top = top);
-  }
+  @Input() value!: string;
 
 }

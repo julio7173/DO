@@ -8,14 +8,10 @@ export class CommentService {
 
   comment: Comment[] = [];
 
-  index = 0;
-
   constructor() { }
 
-  add(comment: string){
-    const id = this.index;
-    const newComment: Comment = new Comment(id, comment);
+  add(top: number, bottom: number, comment: string){
+    const newComment: Comment = new Comment(top, bottom, comment);
     this.comment.push(newComment);
-    this.index += 1;
   }
 }
