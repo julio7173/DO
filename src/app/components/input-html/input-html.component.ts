@@ -25,10 +25,10 @@ export class InputHtmlComponent {
 
   constructor(private commentList: CommentService){}
 
-  addComment(){
-    this.commentList.add(this.comment);
-    this.id += 1;
-  }
+  // addComment(){
+  //   this.commentList.add(this.comment);
+  //   this.id += 1;
+  // }
 
   changeHighlight(index: number){
     switch (index) {

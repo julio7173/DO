@@ -1,3 +1,8 @@
 <section class="bg-black rounded-xl p-2 h-full">
-    <app-my-comment></app-my-comment>
+    <div class="pl-4 h-full">
+        <p class="border-l-4 border-white h-full">l</p>
+    </div>
+    @for(comm of comment.comment; track comm){
+        <app-timeline [comment]="comm"  [value]="comm.comm" class="absolute w-[14.14%]" [style.top.px]="comm.top" [height]="comm.heigh"/>
+    }
 </section>
