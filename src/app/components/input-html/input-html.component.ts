@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { HighlightDirective } from '../../directive/highlight.directive';
 import { CommentService } from '../../services/comment.service';
+import { UserComponent } from '../user/user.component';
 
 @Component({
   selector: 'app-input-html',
   standalone: true,
-  imports: [HighlightDirective],
+  imports: [HighlightDirective, UserComponent],
   templateUrl: './input-html.component.html',
   styleUrl: './input-html.component.css'
 })

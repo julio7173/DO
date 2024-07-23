@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { Comment } from '../../class/comment';
+import { NoteComponent } from '../../assets/svg/note/note.component';
 
 @Component({
   selector: 'app-user',
   standalone: true,
-  imports: [],
+  imports: [NoteComponent],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css'
 })
@@ -15,7 +16,6 @@ export class UserComponent {
   @Input() date!: Date;
   @Input() type!: string;
   @Input() comment!: Comment;
-
   
 
 }
