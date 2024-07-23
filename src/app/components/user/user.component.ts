@@ -16,6 +16,10 @@ export class UserComponent {
   @Input() date!: Date;
   @Input() type!: string;
   @Input() comment!: Comment;
+
+  alert(){
+    alert("Funciona");
+  }
   
 
 }
