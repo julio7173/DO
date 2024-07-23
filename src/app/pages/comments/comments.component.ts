@@ -1,13 +1,15 @@
 import { Component, computed, signal } from '@angular/core';
+import { InputHtmlComponent } from '../../components/input-html/input-html.component';
+import { ShowCommentsComponent } from '../../components/show-comments/show-comments.component';
 
 @Component({
-  selector: 'app-signals',
+  selector: 'app-comments',
   standalone: true,
-  imports: [],
-  templateUrl: './signals.component.html',
-  styleUrl: './signals.component.css'
+  imports: [InputHtmlComponent, ShowCommentsComponent],
+  templateUrl: './comments.component.html',
+  styleUrl: './comments.component.css'
 })
-export class SignalsComponent {
+export class CommentsComponent {
 
   // Writable signal
 
