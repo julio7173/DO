@@ -20,6 +20,9 @@ export class UserComponent {
   alert(){
     alert("Funciona");
   }
+
+  width = "24px";
+  height = "24px";
   
 
 }
