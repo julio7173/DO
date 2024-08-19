@@ -4,7 +4,7 @@
     </p> -->
     <div class="flex">
         @for(profile of comment.comment; track profile; let index = $index){
-            <p class="rounded-full bg-white text-black w-fit px-1 z-{{10 - index}} -mr-2">
+            <p class="rounded-full bg-white text-black w-fit p-1 z-{{10 - index}} -mr-2 align-middle" [style.height.px]="height">
                 JC
             </p>
         }

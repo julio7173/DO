@@ -90,13 +90,10 @@
               }
             ],
             "styles": [
-              "src/styles.css"            
+              "src/styles.css"
             ],
             "scripts": []
           }
-        },
-        "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
